@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in ra thế kỷ</title>
+</head>
+<body>
+Nhập vào số năm: <br>
+<input oninput="tinh()" id="name" type="text">
+<p id="demo"></p>
+<script type="text/javascript">
+    function tinh() {
+        let a = +document.getElementById("name").value;
+        let b = Math.floor(parseInt(a)/100);
+        i = b +1;
+        document.getElementById("demo").innerHTML=("Thế kỷ "+i)
+    }
+</script>
+</body>
+</html>

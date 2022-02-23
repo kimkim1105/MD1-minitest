@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập vào a <input type="text" id="st1"><br><br>
+Nhập vào b <input type="text" id="st2"><br><br>
+<button onclick="tinh()">Tính lũy thừa</button>
+<button onclick="tong()">Tính tổng</button>
+<p id="rs"></p>
+<p id="ts"></p>
+<script>
+    function tinh(){
+      let a = +document.getElementById("st1").value;
+      let b = +document.getElementById("st2").value;
+      let c = "a^2= " + Math.pow(a,2) + "<br>";
+      c = c + "a^b= " + Math.pow(a,b);
+      document.getElementById("rs").innerHTML=c
+    }
+    function tong(){
+        let a = +document.getElementById("st1").value;
+        let b = +document.getElementById("st2").value;
+        let s;
+        if(b>=a){
+            if(((b-a)%2)!=0){
+                s = ((b-a+1)/2)*(a+b)
+            }else {s = (((b-a)/2)*(a+b+1)+a)}
+        }else {
+            if(((a-b)%2)!=0){
+                s = ((a-b+1)/2)*(a+b)
+            }else {s = (((a-b)/2)*(a+b+1)+b)}
+        }
+        document.getElementById("ts").innerHTML=("Tổng 2 số là: "+s)
+    }
+</script>
+</body>
+</html>

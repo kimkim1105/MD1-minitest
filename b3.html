@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính a*b</title>
+</head>
+<body>
+<!--nhận vào giá trị từ 1 ô input dùng thẻ input-->
+Nhập vào giá trị a: <input type="text" id="st1"><br><br>
+Nhập vào giá trị b: <input type="text" id="st2"><br><br>
+<button onclick="kq()" >Kết quả S = a*b</button>
+<h1 id="rs"></h1>
+<script>
+    function kq(){
+        let i = +document.getElementById("st1").value;
+        let j = +document.getElementById("st2").value;
+        let a=i*j;
+        document.getElementById("rs").innerHTML = ("S = "+a)
+    }
+</script>
+</body>
+</html>

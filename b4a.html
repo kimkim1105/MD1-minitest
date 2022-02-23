@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình vuông cạnh a</title>
+</head>
+<body>
+Nhập vào cạnh a <input id="canh" type="text" oninput="tinh()"><br><br>
+<p id="demo"></p>
+<script>
+    function tinh(){
+        let a = document.getElementById("canh").value;
+        let c = "Chu vi hình vuông là: "+ eval("a*4") + "<br>";
+        c = c + "Diện tích hình vuông là: " +eval("a*a");
+        document.getElementById("demo").innerHTML= c
+    }
+</script>
+</body>
+</html>
